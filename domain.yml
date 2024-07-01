@@ -1,0 +1,33 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - request_story
+
+entities:
+  - user_name
+
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: user_name
+
+responses:
+  utter_greet:
+    - text: "Hello! What's your name?"
+  utter_goodbye:
+    - text: "Goodbye!"
+  utter_ask_story:
+    - text: "What kind of story would you like to hear?"
+
+actions:
+- action_generate_story
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: True

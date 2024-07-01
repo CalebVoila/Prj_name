@@ -1,0 +1,22 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+
+   
+
+  - intent: request_story
+    examples: |
+      - tell me a story
+      - I want to hear a story
+      - can you tell a story

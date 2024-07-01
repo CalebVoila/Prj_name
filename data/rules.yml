@@ -1,0 +1,26 @@
+tive_loop: fav_form
+
+# - rule: submiting the form
+#   condition:
+#   - active_loop: fav_form
+#   steps:
+#   - action: fav_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_favs
+version: "3.1"
+
+rules:
+
+
+- rule: generate story
+  steps:
+  - intent: request_story
+  - action: action_generate_story
+
+# - rule: Start the form
+#   steps:
+#   - intent: greet
+#   - action: fav_form
+#   - ac
